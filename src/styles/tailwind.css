@@ -1,0 +1,182 @@
+
+    @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #8219d4;
+}
+/* Override default focus colors for tailwindcss-forms https://github.com/tailwindlabs/tailwindcss-forms */
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='search']:focus,
+[type='checkbox']:focus,
+[type='radio']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  --tw-ring-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.react-datepicker-wrapper .react-datepicker__input-container input{
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 0px;
+}
+.react-datepicker__day.react-datepicker__day--keyboard-selected {
+  background: none;
+  color: black;
+}
+input:focus, textarea:focus{
+  outline:none !important;
+  outline-offset: 0 !important;
+  --tw-ring-offset-width:none !important;
+}
+
+li:focus-visible{
+  outline: none;
+}
+
+li:hover{
+  cursor: pointer;
+}
+
+.tab-panel--selected { animation-name: tabPanel; animation-duration: 300ms; animation-timing-function: linear; }
+@keyframes tabPanel { from { opacity: 0; } to { opacity: 1; } }
+/* Input style */
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container label {
+  position: absolute;
+  transform-origin: top left;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.input-container input {
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.home{
+ @apply absolute lg:h-[22px] xl:h-[27px] 2xl:h-[31px] 3xl:h-[37px] inset-[0] justify-center m-[auto] lg:w-[21px] xl:w-[26px] 2xl:w-[30px] 3xl:w-[36px]; 
+}
+.icontitle{
+ @apply mb-[1px] not-italic text-gray_800 w-[auto]; 
+}
+.users{
+ @apply bg-white_A700 items-center my-[0] lg:p-[11px] xl:p-[14px] 2xl:p-[16px] 3xl:p-[19px] rounded-radius1815 w-[100%]; 
+}
+.One_Two{
+ @apply font-sora lg:ml-[13px] xl:ml-[16px] 2xl:ml-[19px] 3xl:ml-[22px] text-gray_901 tracking-ls1 w-[auto]; 
+}
+.userOne{
+ @apply absolute lg:h-[42px] xl:h-[52px] 2xl:h-[59px] 3xl:h-[70px] lg:w-[41px] xl:w-[51px] 2xl:w-[58px] 3xl:w-[69px]; 
+}
+.user_One{
+ @apply font-inter font-normal lg:ml-[150px] xl:ml-[188px] 2xl:ml-[212px] 3xl:ml-[254px] not-italic text-gray_901 w-[auto]; 
+}
+.Tue23janTwenty{
+ @apply font-inter font-normal lg:ml-[111px] xl:ml-[139px] 2xl:ml-[157px] 3xl:ml-[188px] not-italic text-gray_901 w-[auto]; 
+}
+.userOne_Two{
+ @apply lg:h-[42px] xl:h-[52px] 2xl:h-[59px] 3xl:h-[70px] lg:w-[41px] xl:w-[51px] 2xl:w-[58px] 3xl:w-[69px]; 
+}
+.icontitle1{
+ @apply mb-[1px] not-italic text-bluegray_500 w-[auto]; 
+}
+.listone{
+ @apply bg-gray_900 items-center my-[0] lg:p-[11px] xl:p-[14px] 2xl:p-[16px] 3xl:p-[19px] rounded-radius1815 w-[100%]; 
+}
+.One6{
+ @apply font-sora lg:ml-[13px] xl:ml-[16px] 2xl:ml-[19px] 3xl:ml-[22px] text-bluegray_500 tracking-ls1 w-[auto]; 
+}
+.icontitle2{
+ @apply font-semibold lg:ml-[12px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] text-bluegray_500 w-[auto]; 
+}
+.user_Two{
+ @apply font-inter font-normal lg:ml-[134px] xl:ml-[168px] 2xl:ml-[189px] 3xl:ml-[226px] not-italic text-bluegray_500 w-[auto]; 
+}
+.columneditservice{
+ @apply lg:ml-[285px] xl:ml-[356px] 2xl:ml-[401px] 3xl:ml-[481px] text-gray_901 tracking-ls1 w-[auto]; 
+}
+.columnrole{
+ @apply not-italic text-gray_901 tracking-ls1 w-[auto]; 
+}
+.columneditservice1{
+ @apply lg:ml-[285px] xl:ml-[356px] 2xl:ml-[401px] 3xl:ml-[481px] text-gray_500 tracking-ls1 w-[auto]; 
+}
+.columnrole1{
+ @apply not-italic text-gray_500 tracking-ls1 w-[auto]; 
+}
+.columnsettings{
+ @apply lg:ml-[192px] xl:ml-[241px] 2xl:ml-[271px] 3xl:ml-[325px] text-gray_901 tracking-ls1 w-[auto]; 
+}
+.listarrowdown{
+ @apply bg-white_A700 border border-gray_100 border-solid items-center lg:my-[28px] xl:my-[35px] 2xl:my-[40px] 3xl:my-[48px] lg:p-[12px] xl:p-[16px] 2xl:p-[18px] 3xl:p-[21px] rounded-radius16 shadow-bs2 w-[100%]; 
+}
+.arrowdown{
+ @apply lg:h-[39px] xl:h-[49px] 2xl:h-[55px] 3xl:h-[65px] ml-[4px] w-[17%]; 
+}
+.titledesc{
+ @apply lg:mt-[3px] xl:mt-[4px] 2xl:mt-[5px] 3xl:mt-[6px] not-italic text-gray_901 w-[auto]; 
+}
+.title6{
+ @apply font-semibold text-gray_901 tracking-ls1 w-[auto]; 
+}
+.titledesc1{
+ @apply lg:mt-[3px] xl:mt-[4px] 2xl:mt-[5px] 3xl:mt-[6px] not-italic text-gray-300 w-[auto]; 
+}
+.title8{
+ @apply font-semibold text-gray-300 tracking-ls1 w-[auto]; 
+}
+.titledesc2{
+ @apply mb-[2px] lg:mt-[4px] xl:mt-[5px] 2xl:mt-[6px] 3xl:mt-[7px] not-italic text-gray_901 w-[auto]; 
+}
+.columnconfigurations{
+ @apply lg:ml-[14px] xl:ml-[17px] 2xl:ml-[20px] 3xl:ml-[24px] text-gray_901 w-[auto]; 
+}
+.Setdarkmode{
+ @apply lg:mt-[13px] xl:mt-[16px] 2xl:mt-[19px] 3xl:mt-[22px] not-italic text-bluegray_902 w-[auto]; 
+}
+.Buttonsmall{
+ @apply font-medium p-[0] xl:text-[12px] 2xl:text-[14px] 3xl:text-[16px] lg:text-[9px] text-gray-300 tracking-ls1 w-[100%]; 
+}
+.columnsettings1{
+ @apply lg:ml-[192px] xl:ml-[241px] 2xl:ml-[271px] 3xl:ml-[325px] text-gray_500 tracking-ls1 w-[auto]; 
+}
+.listarrowdown1{
+ @apply bg-gray_900 border border-gray_100 border-solid items-center lg:my-[28px] xl:my-[35px] 2xl:my-[40px] 3xl:my-[48px] lg:p-[12px] xl:p-[16px] 2xl:p-[18px] 3xl:p-[21px] rounded-radius16 shadow-bs2 w-[100%]; 
+}
+.titledesc3{
+ @apply lg:mt-[3px] xl:mt-[4px] 2xl:mt-[5px] 3xl:mt-[6px] not-italic text-gray_500 w-[auto]; 
+}
+.title11{
+ @apply font-semibold text-gray_500 tracking-ls1 w-[auto]; 
+}
+.titledesc4{
+ @apply lg:mt-[3px] xl:mt-[4px] 2xl:mt-[5px] 3xl:mt-[6px] not-italic text-white_A700 w-[auto]; 
+}
+.title13{
+ @apply font-semibold text-white_A700 tracking-ls1 w-[auto]; 
+}
+.titledesc5{
+ @apply mb-[2px] lg:mt-[4px] xl:mt-[5px] 2xl:mt-[6px] 3xl:mt-[7px] not-italic text-gray_500 w-[auto]; 
+}
+.columnconfigurations1{
+ @apply lg:ml-[14px] xl:ml-[17px] 2xl:ml-[20px] 3xl:ml-[24px] text-gray_500 w-[auto]; 
+}
+.Buttonsmall1{
+ @apply font-medium p-[0] xl:text-[12px] 2xl:text-[14px] 3xl:text-[16px] lg:text-[9px] text-bluegray_901 tracking-ls1 w-[100%]; 
+}
+.listarrowdown2{
+ @apply bg-purple_600 border border-gray-300 border-solid items-center lg:my-[28px] xl:my-[35px] 2xl:my-[40px] 3xl:my-[48px] lg:p-[12px] xl:p-[16px] 2xl:p-[18px] 3xl:p-[21px] rounded-radius16 shadow-bs3 w-[100%]; 
+}
