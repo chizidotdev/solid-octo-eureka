@@ -6,7 +6,7 @@ type Props = React.ComponentPropsWithoutRef<"input"> &
   VariantProps<typeof inputStyles>;
 
 const inputStyles = cva(
-  "h-10 w-full bg-inherit font-medium placeholder:opacity-50 border placeholder:text-sm",
+  "w-full bg-inherit font-medium placeholder:opacity-50 border placeholder:text-sm",
   {
     variants: {
       color: {
@@ -24,8 +24,8 @@ const inputStyles = cva(
         ],
       },
       intent: {
-        form: "px-5",
-        header: "px-11",
+        form: "px-5 py-2",
+        header: "px-11 py-3",
       },
     },
 
