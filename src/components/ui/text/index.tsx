@@ -4,26 +4,28 @@ import type { VariantProps } from "class-variance-authority";
 
 type Props = VariantProps<typeof textStyles> & {
   children: React.ReactNode;
+  className?: string;
 };
 
-const textStyles = cva(
-  "text-inherit font-inter text-white_night dark:text-white_day",
-  {
-    variants: {
-      intent: {
-        h1: "text-4xl sm:text-[42px] font-bold text-center",
-        h2: "",
-        h3: "",
-        p: "text-base",
-      },
+const textStyles = cva("text-inherit font-inter", {
+  variants: {
+    intent: {
+      h1: "sm:text-4xl text-3xl font-medium",
+      h2: "",
+      h3: "",
+      p: "text-base",
     },
-    defaultVariants: {},
-  }
-);
+  },
+  defaultVariants: {},
+});
 
-export function Text({ children, intent }: Props) {
+export function Text({ children, intent, className }: Props) {
   const Element = intent || "p";
-  return <Element className={textStyles({ intent })}>{children}</Element>;
+  return (
+    <Element className={textStyles({ intent })}>
+      <span className={className}>{children}</span>
+    </Element>
+  );
 }
 
 export default Text;

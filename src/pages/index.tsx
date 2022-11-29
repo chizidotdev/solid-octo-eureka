@@ -21,7 +21,7 @@ const LoginPage = () => {
           alt="VectorTwo"
         />
 
-        <Column className="z-10 flex max-w-lg flex-col items-center justify-center gap-3 rounded-radius15 bg-white_day p-10 text-brand-primary_day shadow-xl dark:bg-white-secondary_night dark:text-brand-primary_night md:w-[50%]">
+        <div className="z-10 flex max-w-lg flex-col items-center justify-center gap-3 rounded-radius15 bg-white_day p-10 text-brand-primary_day shadow-xl dark:bg-white-secondary_night dark:text-brand-primary_night md:w-[50%]">
           <Text intent="h1">Login</Text>
 
           <Text intent="p">Please enter your login details</Text>
@@ -48,7 +48,7 @@ const LoginPage = () => {
 
             <Button onClick={() => push("/users")}>Login</Button>
           </div>
-        </Column>
+        </div>
 
         <Img
           src="images/img_whitelogo.svg"
