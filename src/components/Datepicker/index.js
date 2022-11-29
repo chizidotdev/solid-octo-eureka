@@ -1,4 +1,4 @@
-import { ErrorMessage } from "components/ErrorMessage";
+import { ErrorMessage } from "@components/ErrorMessage";
 import React from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
