@@ -7,9 +7,6 @@ import { Line } from "./Line";
 import { List } from "./List";
 import { Row } from "./Row";
 import { Stack } from "./Stack";
-import { Text } from "./Text";
-import { Input } from "./Input";
-import { Button } from "./Button";
 import { SelectBox } from "./SelectBox";
 import { Switch } from "./Switch";
 export {
@@ -22,9 +19,6 @@ export {
   List,
   Row,
   Stack,
-  Text,
-  Input,
-  Button,
   SelectBox,
   Switch,
 };

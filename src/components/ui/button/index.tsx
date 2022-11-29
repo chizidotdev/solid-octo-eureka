@@ -25,7 +25,7 @@ const buttonStyles = cva("w-full px-5 py-3 rounded-lg font-bold", {
   },
 });
 
-export function Button({ children, intent, size, ...props }: Props) {
+export default function Button({ children, intent, size, ...props }: Props) {
   return (
     <button className={buttonStyles({ intent, size })} {...props}>
       {children}
