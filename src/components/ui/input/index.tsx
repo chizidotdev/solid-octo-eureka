@@ -10,7 +10,12 @@ const inputStyles = cva(
   {
     variants: {
       color: {
-        primary: ["border-black_night", "rounded-full"],
+        primary: [
+          "rounded-full",
+          "border-black_night dark:border-brand-primary_night",
+          "dark:text-gray_day text-gray_night",
+          "placeholder:text-gray_night dark:placeholder:text-gray_day",
+        ],
         brand: [
           "rounded-lg",
           "border-brand_200",
@@ -20,7 +25,7 @@ const inputStyles = cva(
       },
       intent: {
         form: "px-5",
-        header: "px-10",
+        header: "px-11",
       },
     },
 

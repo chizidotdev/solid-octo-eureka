@@ -6,17 +6,20 @@ type Props = VariantProps<typeof textStyles> & {
   children: React.ReactNode;
 };
 
-const textStyles = cva("text-inherit font-inter", {
-  variants: {
-    intent: {
-      h1: "text-4xl sm:text-[42px] font-bold text-center",
-      h2: "",
-      h3: "",
-      p: "text-base",
+const textStyles = cva(
+  "text-inherit font-inter text-white_night dark:text-white_day",
+  {
+    variants: {
+      intent: {
+        h1: "text-4xl sm:text-[42px] font-bold text-center",
+        h2: "",
+        h3: "",
+        p: "text-base",
+      },
     },
-  },
-  defaultVariants: {},
-});
+    defaultVariants: {},
+  }
+);
 
 export function Text({ children, intent }: Props) {
   const Element = intent || "p";

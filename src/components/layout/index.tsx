@@ -7,9 +7,9 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <main>
+    <div className="bg-white_day dark:bg-white_night">
       <Header />
       <div>{children}</div>
-    </main>
+    </div>
   );
 }
