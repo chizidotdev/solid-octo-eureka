@@ -14,6 +14,8 @@ module.exports = {
         white_night: "#111827",
         white_day: "#ffffff",
         "white-secondary_night": "#1E293B",
+        gray_day: "#E2E8F0",
+        gray_night: "#182441",
         "brand-primary_day": "#6313A2",
         "brand-primary_night": "#CD9DF3",
         "brand-secondary_night": "#A954EB",
