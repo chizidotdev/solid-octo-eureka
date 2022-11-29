@@ -22,9 +22,9 @@ const textStyles = cva("text-inherit font-inter", {
 export function Text({ children, intent, className }: Props) {
   const Element = intent || "p";
   return (
-    <Element className={textStyles({ intent })}>
-      <span className={className}>{children}</span>
-    </Element>
+    <span className={className}>
+      <Element className={textStyles({ intent })}>{children}</Element>
+    </span>
   );
 }
 

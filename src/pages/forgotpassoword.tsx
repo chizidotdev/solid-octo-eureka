@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Row, Img, Column } from "@components/index";
+import { Img } from "@components/index";
 import { Input, Button, Text } from "@components/ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -10,7 +10,7 @@ const ForgotPasswordPage = () => {
 
   return (
     <>
-      <Row className="relative flex h-screen flex-col items-center justify-center overflow-hidden p-5 font-inter dark:bg-white_night">
+      <main className="relative flex h-screen flex-col items-center justify-center overflow-hidden p-5 font-inter dark:bg-white_night">
         <Img
           src="images/img_vector1.png"
           className="absolute bottom-0 -right-20 sm:w-[79%] lg:h-[640px] xl:h-[801px] 2xl:h-[901px] 3xl:h-[1081px]"
@@ -23,8 +23,10 @@ const ForgotPasswordPage = () => {
           alt="starrhendalog"
         />
 
-        <Column className="z-10 flex max-w-lg flex-col items-center justify-center gap-3 rounded-radius15 bg-white_day p-10 text-brand-primary_day shadow-xl dark:bg-white-secondary_night dark:text-brand-primary_night md:w-[50%]">
-          <Text intent="h1">Forgot Password</Text>
+        <div className="z-10 flex max-w-lg flex-col items-center justify-center gap-3 rounded-radius15 bg-white_day p-10 text-brand-primary_day shadow-xl dark:bg-white-secondary_night dark:text-brand-primary_night md:w-[50%]">
+          <Text intent="h1" className="text-center">
+            Forgot Password
+          </Text>
 
           <Text intent="p">Please enter your email address</Text>
 
@@ -38,14 +40,16 @@ const ForgotPasswordPage = () => {
               />
             </form>
 
-            <Text intent="p">
-              <Link href="/">Go back to Login</Link>
+            <Text intent="p" className="self-end">
+              <Link href="/">
+                <em>Go back to Login</em>
+              </Link>
             </Text>
 
             <Button onClick={() => push("/users")}>Continue</Button>
           </div>
-        </Column>
-      </Row>
+        </div>
+      </main>
     </>
   );
 };

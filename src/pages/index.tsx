@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Img, Column } from "@components/index";
+import { Img } from "@components/index";
 import { Input, Button, Text } from "@components/ui";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -9,7 +9,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <Stack className="relative flex h-screen items-center justify-center overflow-hidden bg-white_day p-5 font-inter dark:bg-white_night">
+      <main className="relative flex h-screen items-center justify-center overflow-hidden bg-white_day p-5 font-inter dark:bg-white_night">
         <Img
           src="images/img_vector1.png"
           className="absolute -right-20 bottom-0 sm:w-[79%] lg:h-[640px] xl:h-[801px] 2xl:h-[901px] 3xl:h-[1081px]"
@@ -42,8 +42,10 @@ const LoginPage = () => {
               />
             </form>
 
-            <Text intent="p">
-              <Link href="/forgotpassoword">Forgot password?</Link>
+            <Text intent="p" className="self-end">
+              <Link href="/forgotpassoword">
+                <em>Forgot password?</em>
+              </Link>
             </Text>
 
             <Button onClick={() => push("/users")}>Login</Button>
@@ -55,7 +57,7 @@ const LoginPage = () => {
           className="absolute left-[6%] top-[6%] w-44 lg:h-[23px] xl:h-[29px] 2xl:h-[33px] 3xl:h-[39px]"
           alt="whitelogo"
         />
-      </Stack>
+      </main>
     </>
   );
 };
