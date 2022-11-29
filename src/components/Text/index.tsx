@@ -9,10 +9,10 @@ type Props = VariantProps<typeof textStyles> & {
 const textStyles = cva("text-brand-primary_day dark:text-brand-primary_night", {
   variants: {
     intent: {
-      h1: "text-[42px] font-bold",
+      h1: "text-4xl sm:text-[42px] font-bold text-center",
       h2: "",
       h3: "",
-      p: "text-base",
+      p: "text-base font-light",
     },
   },
   defaultVariants: {},
