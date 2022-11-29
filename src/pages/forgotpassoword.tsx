@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Row, Img, Column, Text, Input, Button } from "@components/index";
+import { Row, Img, Column } from "@components/index";
+import { Input, Button, Text } from "@components/ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -9,7 +10,7 @@ const ForgotPasswordPage = () => {
 
   return (
     <>
-      <Row className="relative flex h-screen flex-col items-center justify-center overflow-hidden p-5 font-inter">
+      <Row className="relative flex h-screen flex-col items-center justify-center overflow-hidden p-5 font-inter dark:bg-white_night">
         <Img
           src="images/img_vector1.png"
           className="absolute bottom-0 -right-20 sm:w-[79%] lg:h-[640px] xl:h-[801px] 2xl:h-[901px] 3xl:h-[1081px]"
@@ -29,7 +30,12 @@ const ForgotPasswordPage = () => {
 
           <div className="flex w-full flex-col gap-5">
             <form className="flex flex-col gap-4">
-              <Input type="email" name="LoginBox" placeholder="Enter E-mail" />
+              <Input
+                type="email"
+                name="LoginBox"
+                placeholder="Enter E-mail"
+                color="brand"
+              />
             </form>
 
             <Text intent="p">

@@ -1,5 +1,6 @@
 import React from "react";
-import { Stack, Img, Column, Text, Input, Button } from "@components/index";
+import { Stack, Img, Column } from "@components/index";
+import { Input, Button, Text } from "@components/ui";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -31,11 +32,13 @@ const LoginPage = () => {
                 type="email"
                 name="LoginBox"
                 placeholder="Username or E-mail"
+                color="brand"
               />
               <Input
                 type="password"
                 name="PasswordBox"
                 placeholder="Password"
+                color="brand"
               />
             </form>
 
