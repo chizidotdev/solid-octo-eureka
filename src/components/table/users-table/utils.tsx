@@ -1,6 +1,6 @@
 import { createColumnHelper } from "@tanstack/react-table";
-import Button from "@ui/button";
 import TableBody from "../table-body";
+import TableButton from "../table-button";
 import TableHead from "../table-head";
 
 export type User = {
@@ -27,15 +27,13 @@ export const columns = [
   }),
   columnHelper.accessor("joined", {
     header: () => <TableHead>Joined</TableHead>,
-    cell: (info) => <TableBody>{info.renderValue().toDateString()}</TableBody>,
+    cell: (info) => <TableBody>{info.getValue().toDateString()}</TableBody>,
   }),
-  columnHelper.display({
+  columnHelper.accessor("id", {
     id: "action",
     header: () => <TableHead>Action</TableHead>,
-    cell: () => (
-      <TableBody>
-        <Button size="small">Edit</Button>
-      </TableBody>
+    cell: (info) => (
+      <TableButton href={`users/edit/${info.getValue()}`}>Edit</TableButton>
     ),
   }),
 ];
