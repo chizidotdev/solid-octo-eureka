@@ -1,6 +1,8 @@
 import Text from "@ui/text";
+import { cva } from "class-variance-authority";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 type Options = {
@@ -14,12 +16,35 @@ type Props = {
   data: Options;
 };
 
+const settingsCardStyles = cva(
+  [
+    "flex items-center gap-5 w-72",
+    "border border-white_day dark:border-black_night",
+    "cursor-pointer rounded-xl px-7 py-4",
+    "shadow-md",
+  ],
+  {
+    variants: {
+      status: {
+        active: [
+          "bg-brand-secondary_day",
+          "text-white_day",
+          "shadow-black_night",
+          "dark:border-gray_day",
+        ],
+      },
+    },
+  }
+);
+
 export default function SettingsCard({ data }: Props) {
+  const { pathname } = useRouter();
   const { description, title, icon, href } = data;
+  const status = href === pathname.split("/").pop() ? "active" : undefined;
 
   return (
     <Link href={`/settings/${href}`}>
-      <div className="flex w-72 cursor-pointer items-center gap-5 rounded-lg border px-7 py-4 shadow-md dark:border-black_night">
+      <div className={settingsCardStyles({ status })}>
         <Image
           src={icon}
           alt={title}

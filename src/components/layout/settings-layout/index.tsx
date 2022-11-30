@@ -23,7 +23,6 @@ export function SettingsLayout({ children }: Props) {
     </div>
   );
 }
-
 const settingsOptions = [
   {
     title: "Appearance",
