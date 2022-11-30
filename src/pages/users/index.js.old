@@ -2,30 +2,30 @@ import React from "react";
 
 import { Column, Row, Stack, Img, Line, List } from "@components/index";
 import { Button, Text } from "@components/ui";
-// import Header from "@components/header";
+import Header from "@components/header";
 import Layout from "@components/layout";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const UsersPage = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   function handleNavigate33() {
-    // navigate("/edituser");
+    navigate("/edituser");
   }
   function handleNavigate34() {
-    // navigate("/edituser");
+    navigate("/edituser");
   }
   function handleNavigate35() {
-    // navigate("/edituser");
+    navigate("/edituser");
   }
   function handleNavigate36() {
-    // navigate("/edituser");
+    navigate("/edituser");
   }
   function handleNavigate37() {
-    // navigate("/services");
+    navigate("/services");
   }
   function handleNavigate38() {
-    // navigate("/settings");
+    navigate("/settings");
   }
 
   return (
