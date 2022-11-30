@@ -4,18 +4,12 @@ import { Switch } from "@headlessui/react";
 import Button from "@ui/button";
 import Text from "@ui/text";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { FiCheck } from "react-icons/fi";
+import { useTheme } from "src/store/theme";
 
 export default function Settings() {
-  const [enabled, setEnabled] = useState(false);
-
-  const handleToggle = () => {
-    if (!document) return;
-    document.documentElement.classList.toggle("dark");
-    // : document.documentElement.classList.remove("dark");
-    setEnabled((enabled) => !enabled);
-  };
+  const { isDarkMode, setIsDarkMode } = useTheme();
 
   return (
     <Layout>
@@ -24,7 +18,7 @@ export default function Settings() {
           <Text intent="h1">Settings</Text>
 
           <div className="flex flex-col gap-5 md:gap-10">
-            {navItems.map((item) => (
+            {settingsOptions.map((item) => (
               <SettingsCard key={item.icon} data={item} />
             ))}
           </div>
@@ -50,16 +44,16 @@ export default function Settings() {
 
             <div className="flex flex-1 items-center justify-center">
               <Switch
-                checked={enabled}
-                onChange={handleToggle}
+                checked={isDarkMode}
+                onChange={setIsDarkMode}
                 className={`${
-                  enabled ? "bg-brand-primary_day" : "bg-gray-200"
+                  isDarkMode ? "bg-brand-primary_day" : "bg-gray-200"
                 } relative inline-flex h-6 w-11 items-center rounded-full`}
               >
                 <span className="sr-only">Enable dark mode</span>
                 <span
                   className={`${
-                    enabled ? "translate-x-6" : "translate-x-1"
+                    isDarkMode ? "translate-x-6" : "translate-x-1"
                   } inline-block h-4 w-4 transform rounded-full bg-white transition`}
                 />
               </Switch>
@@ -80,7 +74,7 @@ export default function Settings() {
   );
 }
 
-const navItems = [
+const settingsOptions = [
   {
     title: "Appearance",
     description: "Dark and Light mode",

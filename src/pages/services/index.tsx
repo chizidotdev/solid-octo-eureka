@@ -2,12 +2,14 @@ import React from "react";
 import Layout from "@components/layout";
 import Text from "@ui/text";
 import Tabs from "@components/tabs";
-import type { Service } from "@components/table";
 import { ServicesTable } from "@components/table";
+import { useService } from "@store/service";
 
 export default function ServicesPage() {
+  const { services } = useService();
+
   const panels = tabs.map((_, idx) => (
-    <ServicesTable key={idx} data={defaultData} />
+    <ServicesTable key={idx} data={services} />
   ));
 
   return (
@@ -24,23 +26,3 @@ export default function ServicesPage() {
 }
 
 const tabs = ["All", "Admins", "Users", "Rhendors"];
-const defaultData: Service[] = [
-  {
-    id: 1,
-    name: "web development",
-    description: "build website",
-    updated: new Date(),
-  },
-  {
-    id: 2,
-    name: "marketing",
-    description: "generate sales revenue",
-    updated: new Date(),
-  },
-  {
-    id: 3,
-    name: "ux designer",
-    description: "branding and design",
-    updated: new Date(),
-  },
-];

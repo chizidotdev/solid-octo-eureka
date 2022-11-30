@@ -2,13 +2,7 @@ import { createColumnHelper } from "@tanstack/react-table";
 import TableBody from "../table-body";
 import TableButton from "../table-button";
 import TableHead from "../table-head";
-
-export type User = {
-  id: number;
-  name: string;
-  role: "user" | "admin";
-  joined: Date;
-};
+import type { User } from "@store/user";
 
 const columnHelper = createColumnHelper<User>();
 
