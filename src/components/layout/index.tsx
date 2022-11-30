@@ -12,7 +12,7 @@ export default function Layout({ children }: Props) {
       <Header />
       <main className="container flex flex-grow">
         <Navbar />
-        <section className="w-full px-5 py-10 sm:px-10">{children}</section>
+        <section className="w-full px-5 py-[10vh] sm:px-10">{children}</section>
       </main>
     </div>
   );

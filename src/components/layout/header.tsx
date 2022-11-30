@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full items-center bg-inherit py-2 px-5 shadow-md dark:shadow-xl">
+      <header className="sticky top-0 z-10 w-full items-center bg-inherit py-2 px-5 shadow-md dark:shadow-xl">
         <div className="container flex items-center justify-between gap-5 md:gap-20">
           <RhendaLogo />
 
