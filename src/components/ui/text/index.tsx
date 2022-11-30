@@ -10,7 +10,7 @@ type Props = VariantProps<typeof textStyles> & {
 const textStyles = cva("text-inherit font-inter", {
   variants: {
     intent: {
-      h1: "sm:text-4xl text-3xl font-medium",
+      h1: "sm:text-4xl text-3xl font-bold",
       h2: "",
       h3: "",
       p: "text-base",

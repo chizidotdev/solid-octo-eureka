@@ -6,6 +6,7 @@
     "@dhiwise/react-switch": "^1.0.2",
     "@headlessui/react": "^1.7.4",
     "@tailwindcss/forms": "0.4.0",
+    "@tanstack/react-table": "^8.7.0",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
