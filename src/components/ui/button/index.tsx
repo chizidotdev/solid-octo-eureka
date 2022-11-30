@@ -8,7 +8,7 @@ type Props = VariantProps<typeof buttonStyles> & {
   type?: "button" | "submit" | "reset";
 };
 
-const buttonStyles = cva("w-full px-5 py-3 rounded-lg font-semibold", {
+const buttonStyles = cva("w-full px-5 py-3 font-semibold", {
   variants: {
     intent: {
       primary: "bg-brand-primary_day dark:bg-brand-secondary_day text-white",
@@ -19,15 +19,26 @@ const buttonStyles = cva("w-full px-5 py-3 rounded-lg font-semibold", {
       small: ["text-sm", "py-2", "w-max"],
       large: ["text-base", "py-3"],
     },
+    variant: {
+      rounded: "rounded-full",
+      normal: "rounded-lg",
+    },
   },
   defaultVariants: {
     intent: "primary",
+    variant: "normal",
   },
 });
 
-export default function Button({ children, intent, size, ...props }: Props) {
+export default function Button({
+  children,
+  intent,
+  size,
+  variant,
+  ...props
+}: Props) {
   return (
-    <button className={buttonStyles({ intent, size })} {...props}>
+    <button className={buttonStyles({ intent, size, variant })} {...props}>
       {children}
     </button>
   );

@@ -4,7 +4,7 @@ module.exports = {
     "./src/**/**/*.{js,ts,jsx,tsx,html,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,html,mdx}",
   ],
-  // darkMode: "class",
+  darkMode: "class",
   theme: {
     extend: {
       screens: { lg: "1024px", xl: "1281px", "2xl": "1441px", "3xl": "1729px" },
