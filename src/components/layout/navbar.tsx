@@ -5,7 +5,7 @@ import React from "react";
 export default function Navbar() {
   return (
     <>
-      <nav className="fixed bottom-0 flex h-20 w-full items-center justify-center gap-12 md:sticky md:h-auto md:w-32 md:flex-col md:justify-start md:pt-[20vh] xl:w-[10vw]">
+      <nav className="fixed bottom-0 z-10 flex h-20 w-full items-center justify-center gap-12 bg-white_day dark:bg-white_night md:sticky md:h-auto md:w-32 md:flex-col md:justify-start md:pt-[20vh] xl:w-[10vw]">
         {icons.map((icon) => (
           <Link href={icon.href} key={icon.src}>
             <Icon alt={icon.alt} src={icon.src} />

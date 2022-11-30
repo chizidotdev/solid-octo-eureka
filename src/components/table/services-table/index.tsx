@@ -3,31 +3,14 @@ import Table from "../table";
 import type { Service } from "./utils";
 import { columns } from "./utils";
 
-export default function ServicesTable() {
+type Props = {
+  data: Service[];
+};
+
+export default function ServicesTable({ data }: Props) {
   return (
     <div>
-      <Table<Service> columns={columns} data={defaultData} />
+      <Table<Service> columns={columns} data={data} />
     </div>
   );
 }
-
-const defaultData: Service[] = [
-  {
-    id: 1,
-    name: "web development",
-    description: "build website",
-    updated: new Date(),
-  },
-  {
-    id: 2,
-    name: "marketing",
-    description: "generate sales revenue",
-    updated: new Date(),
-  },
-  {
-    id: 3,
-    name: "ux designer",
-    description: "branding and design",
-    updated: new Date(),
-  },
-];

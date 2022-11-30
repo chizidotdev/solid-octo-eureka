@@ -1,4 +1,5 @@
 import { createColumnHelper } from "@tanstack/react-table";
+import Button from "@ui/button";
 import TableBody from "../table-body";
 import TableHead from "../table-head";
 
@@ -31,6 +32,10 @@ export const columns = [
   columnHelper.display({
     id: "action",
     header: () => <TableHead>Action</TableHead>,
-    cell: () => <TableBody>edit</TableBody>,
+    cell: () => (
+      <TableBody>
+        <Button size="small">Edit</Button>
+      </TableBody>
+    ),
   }),
 ];

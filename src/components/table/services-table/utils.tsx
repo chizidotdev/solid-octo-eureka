@@ -1,4 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
+import Button from "@ui/button";
+import TableBody from "../table-body";
+import TableHead from "../table-head";
 
 export type Service = {
   id: number;
@@ -15,20 +18,24 @@ export const columns = [
     cell: (info) => info.getValue(),
   }),
   columnHelper.accessor("name", {
-    header: () => <span>Name</span>,
-    cell: (info) => <i>{info.getValue()}</i>,
+    header: () => <TableHead>Name</TableHead>,
+    cell: (info) => <TableBody>{info.getValue()}</TableBody>,
   }),
   columnHelper.accessor("description", {
-    header: () => <span>description</span>,
-    cell: (info) => <>{info.getValue()}</>,
+    header: () => <TableHead>description</TableHead>,
+    cell: (info) => <TableBody>{info.getValue()}</TableBody>,
   }),
   columnHelper.accessor("updated", {
-    header: () => <span>updated</span>,
-    cell: (info) => info.renderValue().toDateString(),
+    header: () => <TableHead>updated</TableHead>,
+    cell: (info) => <TableBody>{info.renderValue().toDateString()}</TableBody>,
   }),
   columnHelper.display({
     id: "action",
-    header: () => <>Action</>,
-    cell: () => <>edit</>,
+    header: () => <TableHead>Action</TableHead>,
+    cell: () => (
+      <TableBody>
+        <Button size="small">Edit</Button>
+      </TableBody>
+    ),
   }),
 ];
