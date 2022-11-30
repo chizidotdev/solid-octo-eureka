@@ -1,4 +1,4 @@
-import SettingsCard from "@components/settings-card";
+import SettingsCard from "./settings-card";
 import Text from "@ui/text";
 import React from "react";
 
@@ -29,25 +29,30 @@ const settingsOptions = [
     title: "Appearance",
     description: "Dark and Light mode",
     icon: "/images/img_blue.png",
+    href: "appearance",
   },
   {
     title: "App Settings",
     description: "Admin app configurations",
     icon: "/images/img_orange.png",
+    href: "app",
   },
   {
     title: "Configurations",
     description: "Main app configurations",
     icon: "/images/img_green.png",
+    href: "configurations",
   },
   {
     title: "Account Settings",
     description: "Edit profile information",
     icon: "/images/img_teal.png",
+    href: "account",
   },
   {
     title: "Security",
     description: "Change Password",
     icon: "/images/img_yellow.png",
+    href: "security",
   },
 ];
