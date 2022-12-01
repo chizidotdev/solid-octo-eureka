@@ -18,8 +18,6 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDarkMode, setIsDarkMode] = useState(initialDarkModeStatus);
 
   const toggleDarkMode = () => {
-    console.log("toggling");
-
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("darkMode", "true");
