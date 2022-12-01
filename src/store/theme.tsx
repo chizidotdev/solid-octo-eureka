@@ -10,9 +10,19 @@ const ThemeContext = createContext<ThemeContextProps>({
   setIsDarkMode: () => null,
 });
 
-const initialDarkModeStatus = () =>
-  typeof window !== "undefined" &&
-  (JSON.parse(localStorage.getItem("darkMode")) as boolean);
+const initialDarkModeStatus = () => {
+  if (typeof window === "undefined") return;
+
+  /**
+   * First, check user darkmode status
+   * else, check localStorage darkmode status
+   */
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return true;
+  } else {
+    return JSON.parse(localStorage.getItem("darkMode")) as boolean;
+  }
+};
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDarkMode, setIsDarkMode] = useState(initialDarkModeStatus);
