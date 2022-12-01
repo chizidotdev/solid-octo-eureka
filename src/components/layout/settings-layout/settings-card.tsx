@@ -18,7 +18,8 @@ type Props = {
 
 const settingsCardStyles = cva(
   [
-    "flex items-center gap-5 w-72",
+    "flex items-center gap-5",
+    "w-full lg:w-72",
     "border border-white_day dark:border-black_night",
     "cursor-pointer rounded-xl px-7 py-4",
     "shadow-md",

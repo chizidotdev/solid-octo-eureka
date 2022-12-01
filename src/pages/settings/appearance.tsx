@@ -12,7 +12,7 @@ const Appearance: NextPageWithLayout = () => {
   const { isDarkMode, setIsDarkMode } = useTheme();
 
   return (
-    <div className="flex flex-col gap-10 border-l pl-10 dark:border-black_night">
+    <>
       <Text intent="h2">Appearances</Text>
 
       <div className="flex items-center gap-4">
@@ -56,7 +56,7 @@ const Appearance: NextPageWithLayout = () => {
           </span>
         </Button>
       </div>
-    </div>
+    </>
   );
 };
 

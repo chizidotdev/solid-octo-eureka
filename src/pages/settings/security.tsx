@@ -4,9 +4,9 @@ import type { NextPageWithLayout } from "../_app";
 
 const Security: NextPageWithLayout = () => {
   return (
-    <div className="flex flex-col gap-10 border-l pl-10 dark:border-black_night">
+    <>
       <Text intent="h2">Security</Text>
-    </div>
+    </>
   );
 };
 
