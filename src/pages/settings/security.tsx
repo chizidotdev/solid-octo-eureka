@@ -10,8 +10,6 @@ const Security: NextPageWithLayout = () => {
   );
 };
 
-Security.getLayout = function getLayout(page) {
-  return <Layout settings>{page}</Layout>;
-};
+Security.getLayout = (page) => <Layout settings>{page}</Layout>;
 
 export default Security;

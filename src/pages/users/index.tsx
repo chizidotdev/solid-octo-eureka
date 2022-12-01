@@ -23,9 +23,8 @@ const UsersPage: NextPageWithLayout = () => {
   );
 };
 
-UsersPage.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
-};
+UsersPage.getLayout = (page) => <Layout>{page}</Layout>;
+
 export default UsersPage;
 
 const tabs = ["All", "Admins", "Users", "Rhendors"];

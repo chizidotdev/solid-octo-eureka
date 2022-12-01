@@ -10,8 +10,6 @@ const Account: NextPageWithLayout = () => {
   );
 };
 
-Account.getLayout = function getLayout(page) {
-  return <Layout settings>{page}</Layout>;
-};
+Account.getLayout = (page) => <Layout settings>{page}</Layout>;
 
 export default Account;

@@ -10,8 +10,6 @@ const App: NextPageWithLayout = () => {
   );
 };
 
-App.getLayout = function getLayout(page) {
-  return <Layout settings>{page}</Layout>;
-};
+App.getLayout = (page) => <Layout settings>{page}</Layout>;
 
 export default App;

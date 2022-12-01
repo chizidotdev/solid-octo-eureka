@@ -1,5 +1,10 @@
+import type { NextPageWithLayout } from "../_app";
 import Layout from "@components/layout";
 
-export default function Settings() {
-  return <Layout settings />;
-}
+const Settings: NextPageWithLayout = () => {
+  return <></>;
+};
+
+Settings.getLayout = (page) => <Layout settings>{page}</Layout>;
+
+export default Settings;

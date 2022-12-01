@@ -10,8 +10,6 @@ const Configurations: NextPageWithLayout = () => {
   );
 };
 
-Configurations.getLayout = function getLayout(page) {
-  return <Layout settings>{page}</Layout>;
-};
+Configurations.getLayout = (page) => <Layout settings>{page}</Layout>;
 
 export default Configurations;

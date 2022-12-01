@@ -24,9 +24,7 @@ const ServicesPage: NextPageWithLayout = () => {
   );
 };
 
-ServicesPage.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
-};
+ServicesPage.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default ServicesPage;
 

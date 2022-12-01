@@ -59,8 +59,6 @@ const Appearance: NextPageWithLayout = () => {
   );
 };
 
-Appearance.getLayout = function getLayout(page) {
-  return <Layout settings>{page}</Layout>;
-};
+Appearance.getLayout = (page) => <Layout settings>{page}</Layout>;
 
 export default Appearance;
