@@ -1,9 +1,8 @@
-import Layout, { SettingsLayout } from "@components/layout";
+import Layout from "@components/layout";
 import { Switch } from "@headlessui/react";
 import Button from "@ui/button";
 import Text from "@ui/text";
 import Image from "next/image";
-import React from "react";
 import { FiCheck } from "react-icons/fi";
 import { useTheme } from "src/store/theme";
 import type { NextPageWithLayout } from "../_app";
@@ -61,11 +60,7 @@ const Appearance: NextPageWithLayout = () => {
 };
 
 Appearance.getLayout = function getLayout(page) {
-  return (
-    <Layout>
-      <SettingsLayout>{page}</SettingsLayout>
-    </Layout>
-  );
+  return <Layout settings>{page}</Layout>;
 };
 
 export default Appearance;

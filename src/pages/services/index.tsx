@@ -4,8 +4,9 @@ import Text from "@ui/text";
 import Tabs from "@components/tabs";
 import { ServicesTable } from "@components/table";
 import { useService } from "@store/service";
+import type { NextPageWithLayout } from "../_app";
 
-export default function ServicesPage() {
+const ServicesPage: NextPageWithLayout = () => {
   const { services } = useService();
 
   const panels = tabs.map((_, idx) => (
@@ -13,16 +14,20 @@ export default function ServicesPage() {
   ));
 
   return (
-    <Layout>
-      <div className="flex flex-col dark:text-black_night">
-        <Text intent="h1" className="dark:text-gray_day">
-          Services
-        </Text>
+    <div className="flex flex-col dark:text-black_night">
+      <Text intent="h1" className="dark:text-gray_day">
+        Services
+      </Text>
 
-        <Tabs tabs={tabs} panels={panels} />
-      </div>
-    </Layout>
+      <Tabs tabs={tabs} panels={panels} />
+    </div>
   );
-}
+};
+
+ServicesPage.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};
+
+export default ServicesPage;
 
 const tabs = ["All", "Admins", "Users", "Rhendors"];

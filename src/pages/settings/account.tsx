@@ -1,4 +1,4 @@
-import Layout, { SettingsLayout } from "@components/layout";
+import Layout from "@components/layout";
 import Text from "@ui/text";
 import type { NextPageWithLayout } from "../_app";
 
@@ -11,11 +11,7 @@ const Account: NextPageWithLayout = () => {
 };
 
 Account.getLayout = function getLayout(page) {
-  return (
-    <Layout>
-      <SettingsLayout>{page}</SettingsLayout>
-    </Layout>
-  );
+  return <Layout settings>{page}</Layout>;
 };
 
 export default Account;

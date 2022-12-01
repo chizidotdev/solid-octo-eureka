@@ -25,6 +25,7 @@ export default function MobileSearchBar({ setValue, value }: Props) {
             name="searchbar"
             placeholder="Search"
             intent="header"
+            autoComplete="off"
           />
         </div>
       </Popover.Panel>

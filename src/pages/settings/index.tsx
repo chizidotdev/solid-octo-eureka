@@ -1,9 +1,5 @@
-import Layout, { SettingsLayout } from "@components/layout";
+import Layout from "@components/layout";
 
 export default function Settings() {
-  return (
-    <Layout>
-      <SettingsLayout />
-    </Layout>
-  );
+  return <Layout settings />;
 }

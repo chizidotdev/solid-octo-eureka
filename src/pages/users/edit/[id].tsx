@@ -1,10 +1,14 @@
+import React from "react";
+import type { NextPageWithLayout } from "src/pages/_app";
+
 import Layout from "@components/layout";
 import ListBox from "@components/list-box";
 import Button from "@ui/button";
 import Text from "@ui/text";
-import React from "react";
 
-export default function EditUser() {
+const roles = [{ name: "user" }, { name: "admin" }];
+
+const EditUser: NextPageWithLayout = () => {
   return (
     <Layout>
       <div className="flex flex-col gap-10 dark:text-black_night sm:px-20">
@@ -23,6 +27,10 @@ export default function EditUser() {
       </div>
     </Layout>
   );
-}
+};
 
-const roles = [{ name: "user" }, { name: "admin" }];
+EditUser.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};
+
+export default EditUser;

@@ -17,6 +17,7 @@ export default function DesktopSearchBar({ value, setValue }: Props) {
         name="searchbar"
         placeholder="Search"
         intent="header"
+        autoComplete="off"
       />
     </div>
   );
