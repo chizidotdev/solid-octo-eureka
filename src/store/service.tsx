@@ -34,19 +34,22 @@ const dummyServices = [
   {
     id: 1,
     name: "web development",
-    description: "build website",
+    description:
+      "Build website. It is a long established fact that a reader will be distracted",
     updated: new Date(),
   },
   {
     id: 2,
     name: "marketing",
-    description: "generate sales revenue",
+    description:
+      "Generate sales revenue. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters",
     updated: new Date(),
   },
   {
     id: 3,
     name: "ux designer",
-    description: "branding and design",
+    description:
+      "Branding and design. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     updated: new Date(),
   },
 ];

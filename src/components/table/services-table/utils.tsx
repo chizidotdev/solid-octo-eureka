@@ -1,8 +1,8 @@
+import type { Service } from "@store/service";
 import { createColumnHelper } from "@tanstack/react-table";
 import TableBody from "../table-body";
-import TableButton from "../table-button";
 import TableHead from "../table-head";
-import type { Service } from "@store/service";
+import TableOptions from "../table-options";
 
 const columnHelper = createColumnHelper<Service>();
 
@@ -17,17 +17,11 @@ export const columns = [
   }),
   columnHelper.accessor("description", {
     header: () => <TableHead>description</TableHead>,
-    cell: (info) => <TableBody>{info.getValue()}</TableBody>,
-  }),
-  columnHelper.accessor("updated", {
-    header: () => <TableHead>updated</TableHead>,
-    cell: (info) => <TableBody>{info.getValue().toDateString()}</TableBody>,
+    cell: (info) => <TableBody description>{info.getValue()}</TableBody>,
   }),
   columnHelper.accessor("id", {
     id: "action",
-    header: () => <TableHead>Action</TableHead>,
-    cell: (info) => (
-      <TableButton href={`services/edit/${info.getValue()}`}>Edit</TableButton>
-    ),
+    header: () => <></>,
+    cell: (info) => <TableOptions id={info.getValue()} />,
   }),
 ];

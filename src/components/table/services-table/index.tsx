@@ -1,6 +1,6 @@
 import React from "react";
 import Table from "../table";
-import type { Service } from "./utils";
+import type { Service } from "@store/service";
 import { columns } from "./utils";
 
 type Props = {
