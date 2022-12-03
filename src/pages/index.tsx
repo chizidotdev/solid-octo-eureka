@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Img } from "@components/index";
 import { Input, Button, Text } from "@components/ui";
 import { useRouter } from "next/router";
@@ -6,6 +6,8 @@ import Link from "next/link";
 
 const LoginPage = () => {
   const { push } = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <>
@@ -33,12 +35,16 @@ const LoginPage = () => {
                 name="LoginBox"
                 placeholder="Username or E-mail"
                 color="brand"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <Input
                 type="password"
                 name="PasswordBox"
                 placeholder="Password"
                 color="brand"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </form>
 

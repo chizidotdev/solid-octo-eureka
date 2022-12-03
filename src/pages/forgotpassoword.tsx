@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Img } from "@components/index";
 import { Input, Button, Text } from "@components/ui";
@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 
 const ForgotPasswordPage = () => {
   const { push } = useRouter();
+  const [email, setEmail] = useState("");
 
   return (
     <>
@@ -37,6 +38,8 @@ const ForgotPasswordPage = () => {
                 name="LoginBox"
                 placeholder="Enter E-mail"
                 color="brand"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </form>
 

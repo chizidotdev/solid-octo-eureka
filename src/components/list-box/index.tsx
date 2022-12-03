@@ -14,7 +14,7 @@ export default function ListBox<T extends { name: string }>({
   return (
     <Listbox value={selected} onChange={setSelected}>
       <div className="relative w-60">
-        <Listbox.Button className="flex w-full items-center justify-between rounded-md border border-gray_day py-2 px-4">
+        <Listbox.Button className="flex w-full items-center justify-between rounded-md border border-black_night py-2 px-4">
           <span>{selected.name}</span>
           <FiChevronDown aria-hidden />
         </Listbox.Button>
