@@ -30,7 +30,7 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Chart.js Line Chart",
+      text: "Rhenda App Analytics",
     },
   },
 };
@@ -55,6 +55,6 @@ export const data = {
   ],
 };
 
-export function App() {
+export default function Chart() {
   return <Line options={options} data={data} />;
 }
