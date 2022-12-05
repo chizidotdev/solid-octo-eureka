@@ -1,6 +1,6 @@
 import React from "react";
 import Table from "../table";
-import type { User } from "./utils";
+import type { User } from "@store/user";
 import { columns } from "./utils";
 
 type Props = {
