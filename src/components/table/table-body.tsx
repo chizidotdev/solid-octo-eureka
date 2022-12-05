@@ -2,14 +2,14 @@ import React from "react";
 
 type Props = {
   children: React.ReactNode;
-  description?: boolean;
+  align?: "left" | "center";
 };
 
-export default function TableBody({ children, description }: Props) {
+export default function TableBody({ children, align = "center" }: Props) {
   return (
     <div
-      className={`py-5 px-5 font-normal capitalize ${
-        description ? "px-10" : "text-center"
+      className={`flex items-center gap-2 py-5 px-5 font-normal capitalize ${
+        align === "left" ? "pl-20" : "justify-center"
       }`}
     >
       {children}

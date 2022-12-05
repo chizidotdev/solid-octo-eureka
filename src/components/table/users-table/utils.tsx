@@ -3,6 +3,7 @@ import TableBody from "../table-body";
 import TableButton from "../table-button";
 import TableHead from "../table-head";
 import type { User } from "@store/user";
+import Image from "next/image";
 
 const columnHelper = createColumnHelper<User>();
 
@@ -13,7 +14,12 @@ export const columns = [
   }),
   columnHelper.accessor("name", {
     header: () => <TableHead>Name</TableHead>,
-    cell: (info) => <TableBody>{info.getValue()}</TableBody>,
+    cell: (info) => (
+      <TableBody align="left">
+        <Image src="/images/img_user1.png" alt="" width={40} height={40} />
+        {info.getValue()}
+      </TableBody>
+    ),
   }),
   columnHelper.accessor("role", {
     header: () => <TableHead>Role</TableHead>,
