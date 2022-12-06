@@ -24,12 +24,12 @@ const TableOptions = ({ id }: Props) => {
       <Modal isOpen={modalOpen} setIsOpen={setModalOpen}>
         <Dialog.Title
           as="h3"
-          className="text-center text-lg font-medium leading-6"
+          className="text-center text-lg font-medium leading-6 dark:text-white_day"
         >
           <Text intent="h3">Are you sure?</Text>
         </Dialog.Title>
 
-        <div className="mt-10 flex justify-center gap-5 text-sm">
+        <div className="mt-10 flex justify-center gap-5">
           <Button size="small" intent="secondary" onClick={handleDelete}>
             Confirm
           </Button>
@@ -43,12 +43,12 @@ const TableOptions = ({ id }: Props) => {
       <Modal isOpen={deletedModalOpen} setIsOpen={setDeletedModalOpen}>
         <Dialog.Title
           as="h3"
-          className="text-center text-lg font-medium leading-6"
+          className="text-center text-lg font-medium leading-6 dark:text-white_day"
         >
           <Text intent="h3">Deleted Service at id #{id}</Text>
         </Dialog.Title>
 
-        <div className="mt-10 flex justify-center gap-5 text-sm">
+        <div className="mt-10 flex justify-center gap-5">
           <Button onClick={() => setDeletedModalOpen(false)}>Done</Button>
         </div>
       </Modal>

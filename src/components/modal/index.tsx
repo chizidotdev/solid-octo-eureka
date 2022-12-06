@@ -25,7 +25,7 @@ export default function Modal({ children, isOpen, setIsOpen }: ModalProps) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black_day bg-opacity-25" />
+            <div className="fixed inset-0 bg-black_day bg-opacity-25 dark:bg-gray_day dark:bg-opacity-10" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -39,29 +39,9 @@ export default function Modal({ children, isOpen, setIsOpen }: ModalProps) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="flex w-full max-w-md transform flex-col items-center overflow-hidden rounded-2xl bg-white p-6 px-10 shadow-xl transition-all dark:bg-white-secondary_night">
+                <Dialog.Panel className="flex w-full max-w-md transform flex-col items-center overflow-hidden rounded-2xl bg-white p-6 px-10 shadow-xl transition-all dark:bg-white_night">
                   {children}
                 </Dialog.Panel>
-                {/* <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                    <Dialog.Title
-                      as="h3"
-                      className="text-lg font-medium leading-6 text-gray-900"
-                    >
-                    </Dialog.Title>
-                    <div className="mt-2">
-                      <p className="text-sm text-gray-500">{children}</p>
-                    </div>
-
-                    <div className="mt-4">
-                      <button
-                        type="button"
-                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                        onClick={closeModal}
-                      >
-                        Got it, thanks!
-                      </button>
-                    </div>
-                  </Dialog.Panel> */}
               </Transition.Child>
             </div>
           </div>

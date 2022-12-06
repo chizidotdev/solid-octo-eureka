@@ -16,7 +16,8 @@ const buttonStyles = cva(
         primary: "bg-brand-primary_day dark:bg-brand-secondary_day text-white",
         secondary: [
           "bg-gray_day dark:bg-white-secondary_night",
-          "border border-liver text-black_day",
+          "border border-liver",
+          "text-black_day dark:text-white_day",
         ],
         link: "text-liver underline px-0 underline-offset-2",
       },
