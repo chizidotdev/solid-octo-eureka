@@ -12,16 +12,20 @@ const ThemeContext = createContext<ThemeContextProps>({
 
 const initialDarkModeStatus = () => {
   if (typeof window === "undefined") return;
+  return JSON.parse(localStorage.getItem("darkMode")) as boolean;
 
   /**
    * First, check user darkmode status
    * else, check localStorage darkmode status
+   *
+   *
+   * if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+   * return true;
+   * } else {
+   *  return JSON.parse(localStorage.getItem("darkMode")) as boolean;
+   * }
+   *
    */
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    return true;
-  } else {
-    return JSON.parse(localStorage.getItem("darkMode")) as boolean;
-  }
 };
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
