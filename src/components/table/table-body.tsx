@@ -8,7 +8,7 @@ type Props = {
 export default function TableBody({ children, align = "center" }: Props) {
   return (
     <div
-      className={`flex items-center gap-2 py-5 px-5 font-normal capitalize ${
+      className={`flex items-center gap-4 py-5 px-5 font-normal capitalize ${
         align === "left" ? "pl-10" : "justify-center"
       }`}
     >

@@ -13,7 +13,7 @@ export const columns = [
     cell: (info) => info.getValue(),
   }),
   columnHelper.accessor("name", {
-    header: () => <TableHead>Name</TableHead>,
+    header: () => <TableHead name>Name</TableHead>,
     cell: (info) => (
       <TableBody align="left">
         <Image src="/images/img_user1.png" alt="" width={40} height={40} />
