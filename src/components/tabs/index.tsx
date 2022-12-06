@@ -16,7 +16,7 @@ export default function Tabs({ tabs, panels }: TabProps) {
         ))}
       </Tab.List>
 
-      <Tab.Panels className="py-3 text-sm">
+      <Tab.Panels className="py-3">
         {panels.map((panel, idx) => (
           <Tab.Panel key={idx}>{panel}</Tab.Panel>
         ))}

@@ -19,8 +19,8 @@ export default function Table<T>({ data, columns }: TableProps<T>) {
   });
 
   return (
-    <div className="flex overflow-x-auto px-5">
-      <table className="min-w-[560px] flex-grow">
+    <div className="flex w-full overflow-x-auto text-sm">
+      <table className="min-w-[600px] flex-grow table-auto">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>

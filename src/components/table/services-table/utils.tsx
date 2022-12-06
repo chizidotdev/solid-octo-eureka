@@ -9,11 +9,11 @@ const columnHelper = createColumnHelper<Service>();
 
 export const columns = [
   columnHelper.accessor("id", {
-    header: () => "#",
-    cell: (info) => info.getValue(),
+    header: () => <TableHead>#</TableHead>,
+    cell: (info) => <TableBody>{info.getValue()}</TableBody>,
   }),
   columnHelper.accessor("name", {
-    header: () => <TableHead name>Name</TableHead>,
+    header: () => <TableHead size="md">Name</TableHead>,
     cell: (info) => (
       <TableBody align="left">
         <Image src="/images/img_user1.png" alt="" width={40} height={40} />
@@ -22,12 +22,12 @@ export const columns = [
     ),
   }),
   columnHelper.accessor("description", {
-    header: () => <TableHead name>description</TableHead>,
+    header: () => <TableHead size="lg">description</TableHead>,
     cell: (info) => <TableBody align="left">{info.getValue()}</TableBody>,
   }),
   columnHelper.accessor("id", {
     id: "action",
-    header: () => <></>,
+    header: () => <TableHead index />,
     cell: (info) => <TableOptions id={info.getValue()} />,
   }),
 ];

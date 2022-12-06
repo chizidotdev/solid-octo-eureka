@@ -9,8 +9,8 @@ const columnHelper = createColumnHelper<User>();
 
 export const columns = [
   columnHelper.accessor("id", {
-    header: () => <>#</>,
-    cell: (info) => <>{info.getValue()}</>,
+    header: () => <TableHead>#</TableHead>,
+    cell: (info) => <TableBody>{info.getValue()}</TableBody>,
   }),
   columnHelper.accessor("name", {
     header: () => <TableHead>Name</TableHead>,

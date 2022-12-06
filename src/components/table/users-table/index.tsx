@@ -8,9 +8,5 @@ type Props = {
 };
 
 export default function UsersTable({ data }: Props) {
-  return (
-    <div>
-      <Table<User> data={data} columns={columns} />
-    </div>
-  );
+  return <Table<User> data={data} columns={columns} />;
 }

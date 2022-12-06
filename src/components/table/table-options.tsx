@@ -53,7 +53,7 @@ const TableOptions = ({ id }: Props) => {
         </div>
       </Modal>
 
-      <Menu as="div" className="relative inline-block text-left">
+      <Menu as="div" className="relative flex justify-center">
         <Menu.Button>
           <HiOutlineDotsVertical aria-label="Options" />
         </Menu.Button>

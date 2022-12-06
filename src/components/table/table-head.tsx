@@ -1,16 +1,18 @@
 import React from "react";
 
-type Props = {
-  children: React.ReactNode;
-  name?: boolean;
-};
+type Props =
+  | {
+      children?: React.ReactNode;
+      index: boolean;
+    }
+  | {
+      children: React.ReactNode;
+    };
 
-export default function TableHead({ children, name }: Props) {
+export default function TableHead({ children }: Props) {
   return (
     <div
-      className={`py-5 px-5 text-center font-normal uppercase text-black_night ${
-        name ? "min-w-[300px]" : ""
-      }`}
+      className={`py-5 px-5 text-center font-normal uppercase text-black_night`}
     >
       {children}
     </div>
