@@ -16,8 +16,8 @@
     "jsx": "preserve",
     "baseUrl": "./",
     "paths": {
-      "@ui/*": ["./src/components/ui/*"],
       "@components/*": ["./src/components/*"],
+      "@ui/*": ["./src/components/ui/*"],
       "@store/*": ["./src/store/*"]
     },
     "plugins": [{ "name": "next" }]
