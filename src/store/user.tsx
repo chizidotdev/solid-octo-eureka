@@ -7,15 +7,25 @@ export type User = {
   joined: Date;
 };
 
-const UserContext = createContext<{ users: User[] }>({
+const UserContext = createContext<{
+  users: User[];
+  adminUsers: User[];
+  userUsers: User[];
+}>({
   users: [],
+  adminUsers: [],
+  userUsers: [],
 });
 
 export const UserProvider = ({ children }: { children: React.ReactNode }) => {
   const [users] = useState(dummyUsers);
+  const adminUsers = dummyUsers.filter((user) => user.role === "admin");
+  const userUsers = dummyUsers.filter((user) => user.role === "user");
 
   return (
-    <UserContext.Provider value={{ users }}>{children}</UserContext.Provider>
+    <UserContext.Provider value={{ users, adminUsers, userUsers }}>
+      {children}
+    </UserContext.Provider>
   );
 };
 

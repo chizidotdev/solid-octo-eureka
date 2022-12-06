@@ -8,9 +8,13 @@ import { UsersTable } from "@components/table";
 import { useUser } from "@store/user";
 
 const UsersPage: NextPageWithLayout = () => {
-  const { users } = useUser();
+  const { users, adminUsers, userUsers } = useUser();
 
-  const panels = tabs.map((_, idx) => <UsersTable key={idx} data={users} />);
+  const panels = [
+    <UsersTable key={1} data={users} />,
+    <UsersTable key={1} data={adminUsers} />,
+    <UsersTable key={1} data={userUsers} />,
+  ];
 
   return (
     <div className="flex flex-col dark:text-black_night">
