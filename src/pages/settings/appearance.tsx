@@ -3,12 +3,18 @@ import { Switch } from "@headlessui/react";
 import Button from "@ui/button";
 import Text from "@ui/text";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { FiCheck } from "react-icons/fi";
 import { useTheme } from "src/store/theme";
 import type { NextPageWithLayout } from "../_app";
 
 const Appearance: NextPageWithLayout = () => {
   const { isDarkMode, setIsDarkMode } = useTheme();
+  const { push } = useRouter();
+
+  const handleDone = () => {
+    push("/settings");
+  };
 
   return (
     <>
@@ -48,7 +54,7 @@ const Appearance: NextPageWithLayout = () => {
       </div>
 
       <div className="mt-10 self-end">
-        <Button size="small" variant="rounded">
+        <Button size="small" variant="rounded" onClick={handleDone}>
           <span className="grid grid-cols-[1fr_6fr] place-items-center gap-5 pr-5">
             <FiCheck />
             Done

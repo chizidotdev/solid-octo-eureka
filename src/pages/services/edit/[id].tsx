@@ -7,10 +7,16 @@ import Button from "@ui/button";
 import Text from "@ui/text";
 import { useService } from "@store/service";
 import Input from "@ui/input";
+import { useRouter } from "next/router";
 
 const EditService: NextPageWithLayout = () => {
   const [description, setDescription] = useState("");
   const { services } = useService();
+  const { push } = useRouter();
+
+  const handleUpdate = () => {
+    push("/services");
+  };
 
   return (
     <div className="flex flex-col gap-10 dark:text-black_night sm:px-20">
@@ -36,7 +42,7 @@ const EditService: NextPageWithLayout = () => {
       </section>
 
       <div className="max-w-xs">
-        <Button>Update</Button>
+        <Button onClick={handleUpdate}>Update</Button>
       </div>
     </div>
   );

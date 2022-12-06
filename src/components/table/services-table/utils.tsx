@@ -23,7 +23,7 @@ export const columns = [
   }),
   columnHelper.accessor("description", {
     header: () => <TableHead>description</TableHead>,
-    cell: (info) => <TableBody>{info.getValue()}</TableBody>,
+    cell: (info) => <TableBody align="left">{info.getValue()}</TableBody>,
   }),
   columnHelper.accessor("id", {
     id: "action",

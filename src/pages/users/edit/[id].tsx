@@ -5,10 +5,17 @@ import Layout from "@components/layout";
 import ListBox from "@components/list-box";
 import Button from "@ui/button";
 import Text from "@ui/text";
+import { useRouter } from "next/router";
 
 const roles = [{ name: "user" }, { name: "admin" }];
 
 const EditUser: NextPageWithLayout = () => {
+  const { push } = useRouter();
+
+  const handleUpdate = () => {
+    push("/users");
+  };
+
   return (
     <div className="flex flex-col gap-10 dark:text-black_night sm:px-20">
       <Text intent="h1" className="mb-5 dark:text-gray_day">
@@ -21,7 +28,7 @@ const EditUser: NextPageWithLayout = () => {
       </div>
 
       <div className="max-w-xs">
-        <Button>Update</Button>
+        <Button onClick={handleUpdate}>Update</Button>
       </div>
     </div>
   );
