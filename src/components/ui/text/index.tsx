@@ -12,7 +12,7 @@ const textStyles = cva("text-inherit font-inter", {
     intent: {
       h1: "sm:text-4xl text-3xl font-bold",
       h2: "sm:text-3xl text-2xl font-semibold",
-      h3: "",
+      h3: "sm:text-2xl text-xl font-semibold",
       p: "text-base",
     },
   },

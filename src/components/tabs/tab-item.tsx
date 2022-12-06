@@ -29,11 +29,9 @@ export default function TabItem({ children }: Props) {
   return (
     <Tab className="focus-visible:outline-none">
       {({ selected }) => (
-        <span
-          className={tabStyles({ status: selected ? "active" : undefined })}
-        >
+        <div className={tabStyles({ status: selected ? "active" : undefined })}>
           {children}
-        </span>
+        </div>
       )}
     </Tab>
   );

@@ -8,27 +8,33 @@ type Props = VariantProps<typeof buttonStyles> & {
   type?: "button" | "submit" | "reset";
 };
 
-const buttonStyles = cva("w-full px-5 py-3 font-semibold", {
-  variants: {
-    intent: {
-      primary: "bg-brand-primary_day dark:bg-brand-secondary_day text-white",
-      secondary: "bg-liver border border-liver hover:bg-gray-100 text-white",
-      link: "text-liver underline px-0 underline-offset-2",
+const buttonStyles = cva(
+  "w-full px-5 py-3 font-semibold hover:bg-opacity-80 transition-all",
+  {
+    variants: {
+      intent: {
+        primary: "bg-brand-primary_day dark:bg-brand-secondary_day text-white",
+        secondary: [
+          "bg-gray_day dark:bg-white-secondary_night",
+          "border border-liver text-black_day",
+        ],
+        link: "text-liver underline px-0 underline-offset-2",
+      },
+      size: {
+        small: ["text-sm", "py-2", "w-max"],
+        large: ["text-base", "py-3"],
+      },
+      variant: {
+        rounded: "rounded-full",
+        normal: "rounded-lg",
+      },
     },
-    size: {
-      small: ["text-sm", "py-2", "w-max"],
-      large: ["text-base", "py-3"],
+    defaultVariants: {
+      intent: "primary",
+      variant: "normal",
     },
-    variant: {
-      rounded: "rounded-full",
-      normal: "rounded-lg",
-    },
-  },
-  defaultVariants: {
-    intent: "primary",
-    variant: "normal",
-  },
-});
+  }
+);
 
 export default function Button({
   children,
