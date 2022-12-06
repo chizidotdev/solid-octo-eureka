@@ -1,25 +1,27 @@
-import React from "react";
 import Layout from "@components/layout";
-import Text from "@ui/text";
-import Tabs from "@components/tabs";
 import { ServicesTable } from "@components/table";
+import { Button } from "@components/ui";
 import { useService } from "@store/service";
+import Text from "@ui/text";
 import type { NextPageWithLayout } from "../_app";
 
 const ServicesPage: NextPageWithLayout = () => {
   const { services } = useService();
 
-  const panels = tabs.map((_, idx) => (
-    <ServicesTable key={idx} data={services} />
-  ));
-
   return (
-    <div className="flex flex-col dark:text-black_night">
+    <div className="flex flex-col gap-10 dark:text-black_night">
       <Text intent="h1" className="dark:text-gray_day">
         Services
       </Text>
 
-      <Tabs tabs={tabs} panels={panels} />
+      {/* <Tabs tabs={tabs} panels={panels} /> */}
+      <section className="flex flex-col gap-2">
+        <div className="w-36 self-end text-sm">
+          <Button variant="rounded">Create</Button>
+        </div>
+
+        <ServicesTable data={services} />
+      </section>
     </div>
   );
 };
@@ -27,5 +29,3 @@ const ServicesPage: NextPageWithLayout = () => {
 ServicesPage.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default ServicesPage;
-
-const tabs = ["All", "Admins", "Users", "Rhendors"];
