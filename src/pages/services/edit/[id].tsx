@@ -6,8 +6,8 @@ import ListBox from "@components/list-box";
 import Button from "@ui/button";
 import Text from "@ui/text";
 import { useService } from "@store/service";
-import Input from "@ui/input";
 import { useRouter } from "next/router";
+import { Textarea } from "@components/ui";
 
 const EditService: NextPageWithLayout = () => {
   const [description, setDescription] = useState("");
@@ -32,7 +32,7 @@ const EditService: NextPageWithLayout = () => {
 
         <div className="flex flex-col gap-3">
           Description
-          <Input
+          <Textarea
             name="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
