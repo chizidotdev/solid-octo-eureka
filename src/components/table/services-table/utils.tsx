@@ -13,7 +13,7 @@ export const columns = [
     cell: (info) => <TableBody>{info.getValue()}</TableBody>,
   }),
   columnHelper.accessor("name", {
-    header: () => <TableHead size="md">Name</TableHead>,
+    header: () => <TableHead>Name</TableHead>,
     cell: (info) => (
       <TableBody align="left">
         <Image src="/images/img_user1.png" alt="" width={40} height={40} />
@@ -22,7 +22,7 @@ export const columns = [
     ),
   }),
   columnHelper.accessor("description", {
-    header: () => <TableHead size="lg">description</TableHead>,
+    header: () => <TableHead>description</TableHead>,
     cell: (info) => <TableBody align="left">{info.getValue()}</TableBody>,
   }),
   columnHelper.accessor("id", {
