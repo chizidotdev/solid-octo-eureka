@@ -14,7 +14,7 @@ export default function Header() {
 
           <DesktopSearchBar value={value} setValue={setValue} />
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <MobileSearchBar value={value} setValue={setValue} />
             <DESLogo />
           </div>
