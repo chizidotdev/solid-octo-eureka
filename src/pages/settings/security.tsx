@@ -45,7 +45,7 @@ const Security: NextPageWithLayout = () => {
           <Button size="small" variant="rounded" onClick={handleDone}>
             <span className="grid grid-cols-[1fr_6fr] place-items-center gap-5 pr-5">
               <FiCheck />
-              Done
+              Update
             </span>
           </Button>
         </div>
