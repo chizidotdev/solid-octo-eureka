@@ -1,18 +1,20 @@
 import React from "react";
 import type { NextPageWithLayout } from "./_app";
 import Layout from "@components/layout";
+import { AnalyticsCard, UserRegistration } from "@module/analytics";
 import type { AnalyticsCardProps } from "@module/analytics";
-import { AnalyticsCard } from "@module/analytics";
 import { FiUsers, AiOutlineShopping, FaUsers } from "@icons";
 
 const Dashboard: NextPageWithLayout = () => {
   return (
-    <div>
+    <div className="grid w-3/4 gap-10">
       <div className="flex gap-6">
         {summaryData.map((summary) => (
           <AnalyticsCard {...summary} key={summary.title} />
         ))}
       </div>
+
+      <UserRegistration />
     </div>
   );
 };
