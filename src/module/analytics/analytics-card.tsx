@@ -1,23 +1,32 @@
+import { Text } from "@components/ui";
 import React from "react";
 
-type Props = {
+export type AnalyticsCardProps = {
   title: string;
   value: number;
   percentage: number;
   icon: React.ReactNode;
 };
 
-export function AnalyticsCard({ percentage, title, value, icon }: Props) {
+export function AnalyticsCard({
+  percentage,
+  title,
+  value,
+  icon,
+}: AnalyticsCardProps) {
+  const percentageColor =
+    percentage < 0 ? "text-red-700" : "text-brand-secondary_night";
+
   return (
-    <div>
-      <div>
-        <h3>{title}</h3>
-        {icon}
+    <div className="grid w-52 gap-3 rounded-md p-5 shadow-md">
+      <div className="flex items-center justify-between text-black_night">
+        <Text className="text-black_night">{title}</Text>
+        <span className="text-lg">{icon}</span>
       </div>
 
-      <div>
-        <h2>{value}</h2>
-        <h2>{percentage}</h2>
+      <div className="flex items-center justify-between">
+        <Text intent="h3">{value.toLocaleString()}</Text>
+        <Text className={`text-xs ${percentageColor}`}>{percentage}%</Text>
       </div>
     </div>
   );

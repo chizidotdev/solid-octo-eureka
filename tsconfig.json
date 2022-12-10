@@ -16,9 +16,11 @@
     "jsx": "preserve",
     "baseUrl": "./",
     "paths": {
+      "@store/*": ["./src/store/*"],
+      "@module/*": ["./src/module/*"],
+      "@icons": ["./src/components/icons"],
       "@components/*": ["./src/components/*"],
-      "@ui/*": ["./src/components/ui/*"],
-      "@store/*": ["./src/store/*"]
+      "@ui": ["./src/components/ui"]
     },
     "plugins": [{ "name": "next" }]
   },
