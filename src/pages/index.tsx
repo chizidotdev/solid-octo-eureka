@@ -54,7 +54,7 @@ const LoginPage = () => {
               </Link>
             </Text>
 
-            <Button onClick={() => push("/users")}>Login</Button>
+            <Button onClick={() => push("/dashboard")}>Login</Button>
           </div>
         </div>
 

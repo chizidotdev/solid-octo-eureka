@@ -36,7 +36,7 @@ const Icon = ({ src, alt, href }: typeof icons[0]) => {
 };
 
 const icons = [
-  { src: "img_home.svg", alt: "home", href: "" },
+  { src: "img_home.svg", alt: "home", href: "dashboard" },
   { src: "img_user.svg", alt: "users", href: "users" },
   { src: "img_grid.svg", alt: "services", href: "services" },
   { src: "img_settings.svg", alt: "settings", href: "settings" },

@@ -49,7 +49,7 @@ const ForgotPasswordPage = () => {
               </Link>
             </Text>
 
-            <Button onClick={() => push("/users")}>Continue</Button>
+            <Button onClick={() => push("/dashboard")}>Continue</Button>
           </div>
         </div>
       </main>

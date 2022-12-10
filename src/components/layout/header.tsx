@@ -2,6 +2,7 @@ import React from "react";
 
 import { DESLogo, RhendaLogo } from "@components/logo/";
 import { DesktopSearchBar, MobileSearchBar } from "./search";
+import Link from "next/link";
 
 export default function Header() {
   const [value, setValue] = React.useState("");
@@ -10,7 +11,9 @@ export default function Header() {
     <>
       <header className="sticky top-0 z-20 w-full items-center bg-inherit py-2 px-5 shadow-md dark:shadow-xl">
         <div className="container flex items-center justify-between gap-5 md:gap-20">
-          <RhendaLogo />
+          <Link href="/">
+            <RhendaLogo />
+          </Link>
 
           <DesktopSearchBar value={value} setValue={setValue} />
 
