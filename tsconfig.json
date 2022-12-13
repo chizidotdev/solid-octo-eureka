@@ -20,7 +20,8 @@
       "@module/*": ["./src/module/*"],
       "@icons": ["./src/components/icons"],
       "@components/*": ["./src/components/*"],
-      "@ui": ["./src/components/ui"]
+      "@ui": ["./src/components/ui"],
+      "@ui/*": ["./src/components/ui/*"]
     },
     "plugins": [{ "name": "next" }]
   },
