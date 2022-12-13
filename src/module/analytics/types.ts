@@ -1,7 +1,13 @@
+type FixedArray<N extends number, T> = N extends 0
+  ? never[]
+  : {
+      0: T;
+      length: N;
+    } & ReadonlyArray<T>;
+
 export type TRegistration = {
-  amount: number;
-  day: "Sun" | "Mon" | "Tue" | "Wed" | "Thur" | "Fri" | "Sat";
-  key: "Newsletter" | "User Registration";
+  subscription: FixedArray<7, number>;
+  newsletter: FixedArray<7, number>;
 };
 
 export type TUniqueVisitors = {
