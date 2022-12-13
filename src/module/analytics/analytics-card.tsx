@@ -20,12 +20,12 @@ export function AnalyticsCard({
   return (
     <div className="grid w-52 gap-3 rounded-md p-5 shadow-md">
       <div className="flex items-center justify-between text-black_night">
-        <Text className="text-black_night">{title}</Text>
-        <span className="text-lg">{icon}</span>
+        <Text className="text-black_night text-sm font-medium">{title}</Text>
+        <span>{icon}</span>
       </div>
 
       <div className="flex items-center justify-between">
-        <Text intent="h3">{value.toLocaleString()}</Text>
+        <Text intent="h3" className="text-gray_night">{value.toLocaleString()}</Text>
         <Text className={`text-xs ${percentageColor}`}>{percentage}%</Text>
       </div>
     </div>
