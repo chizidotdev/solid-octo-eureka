@@ -1,13 +1,15 @@
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
+  ArcElement,
   BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  Filler,
+  Legend,
+  LinearScale,
+  LineElement,
+  PointElement,
   Title,
   Tooltip,
-  Legend,
 } from "chart.js";
 
 ChartJS.register(
@@ -18,10 +20,18 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  Filler,
+  ArcElement
 );
 
-export * from "./types";
 export { AnalyticsCard } from "./analytics-card";
 export type { AnalyticsCardProps } from "./analytics-card";
+export * from "./types";
+
+export { UniqueVisitors } from "./unique-visitors";
 export { UserRegistration } from "./user-registration";
+export { UsersByGender } from "./users-by-gender";
+export { SessionsPerDay } from "./sessions-per-day";
+export { Navigation } from "./navigation";
+export { UserByDevice } from "./user-by-device";

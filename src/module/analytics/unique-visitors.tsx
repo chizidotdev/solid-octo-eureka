@@ -10,8 +10,12 @@ const options = {
     },
     title: {
       display: true,
-      text: "Chart.js Line Chart",
+      text: "Unique Visitors",
     },
+  },
+  scales: {
+    x: { grid: { display: false } },
+    y: { grid: { lineWidth: 0.5 } },
   },
 };
 

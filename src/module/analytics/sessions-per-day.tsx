@@ -1,4 +1,3 @@
-import { randNumber } from "@ngneat/falso";
 import { Line } from "react-chartjs-2";
 
 export const options = {
@@ -9,8 +8,12 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Chart.js Line Chart",
+      text: "Sessions per Day",
     },
+  },
+  scales: {
+    x: { grid: { lineWidth: 0.5 } },
+    y: { grid: { lineWidth: 0.5 } },
   },
 };
 
@@ -21,10 +24,10 @@ export const data = {
   datasets: [
     {
       fill: true,
-      label: "Dataset 2",
-      data: labels.map(() => randNumber({ min: 0, max: 1000 })),
+      data: [20, 40, 50, 70, 80, 100, 120],
       borderColor: "rgb(53, 162, 235)",
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
+      backgroundColor: "#8219D4",
+      borderWidth: 1,
     },
   ],
 };
