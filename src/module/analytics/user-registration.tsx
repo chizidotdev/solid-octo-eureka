@@ -1,6 +1,6 @@
-import { randNumber } from "@ngneat/falso";
 import React from "react";
 import { Bar } from "react-chartjs-2";
+import { userRegistration } from "./data";
 
 export const options = {
   responsive: true,
@@ -22,13 +22,13 @@ export const data = {
   datasets: [
     {
       label: "Newsletter",
-      data: labels.map(() => randNumber({ min: 10, max: 200 })),
+      data: userRegistration.newsletter as unknown as number[],
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "rgba(255, 99, 132, 0.5)",
     },
     {
       label: "Registration",
-      data: labels.map(() => randNumber({ min: 10, max: 200 })),
+      data: userRegistration.subscription as unknown as number[],
       borderColor: "rgb(53, 162, 235)",
       backgroundColor: "rgba(53, 162, 235, 0.5)",
     },
