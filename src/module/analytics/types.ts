@@ -57,7 +57,7 @@ export type TCountries = {
   country: string;
 };
 
-export type TMosViewedRhendors = {
+export type TMostViewedRhendors = {
   amount: number;
   rhendor: string;
 };
@@ -66,4 +66,6 @@ export type Summary = {
   registration: number;
   traffic: number;
   topCountry: TCountries["country"];
+  topRhendor: TMostViewedRhendors["rhendor"];
+  topService: string;
 };
