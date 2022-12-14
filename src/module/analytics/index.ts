@@ -31,6 +31,7 @@ export * from "./types";
 
 export { UniqueVisitors } from "./components/unique-visitors";
 export { UserRegistration } from "./components/user-registration";
+export { Summary } from "./components/summary";
 export { UsersByGender } from "./components/users-by-gender";
 export { SessionsPerDay } from "./components/sessions-per-day";
 export { Navigation } from "./components/navigation";
