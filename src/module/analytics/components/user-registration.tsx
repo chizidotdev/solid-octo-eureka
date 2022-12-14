@@ -1,7 +1,7 @@
 import type { ChartData } from "chart.js";
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import { userRegistration } from "./data";
+import { userRegistration } from "../data";
 
 const labels = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 
