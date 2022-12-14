@@ -39,25 +39,30 @@ const Dashboard: NextPageWithLayout = () => {
       </section>
 
       <section className="grid gap-20 xl:grid-cols-2">
-        <div>
+        <div className="flex flex-col gap-5">
+          <Text intent="h3">Unique Visitors</Text>
           <UniqueVisitors />
         </div>
 
-        <div>
+        <div className="flex flex-col gap-5">
+          <Text intent="h3">Sessions Per Day</Text>
           <SessionsPerDay />
         </div>
       </section>
 
       <section className="grid gap-10 lg:gap-20 xl:grid-cols-3">
-        <div>
+        <div className="flex flex-col gap-5 rounded-md px-10 py-5 shadow-md">
+          <Text intent="h3">Users By Gender</Text>
           <UsersByGender />
         </div>
 
-        <div>
+        <div className="flex flex-col gap-5 rounded-md px-10 py-5 shadow-md">
+          <Text intent="h3">Navigation</Text>
           <Navigation />
         </div>
 
-        <div>
+        <div className="flex flex-col gap-5 rounded-md px-10 py-5 shadow-md">
+          <Text intent="h3">Users By Device</Text>
           <UserByDevice />
         </div>
       </section>
