@@ -6,6 +6,7 @@ import {
   AnalyticsCard,
   Navigation,
   SessionsPerDay,
+  Summary,
   UniqueVisitors,
   UserByDevice,
   UserRegistration,
@@ -16,24 +17,28 @@ import { Text } from "@components/ui";
 
 const Dashboard: NextPageWithLayout = () => {
   return (
-    <div className="grid gap-32">
-      <section className="grid grid-cols-[3fr_1fr] gap-20">
+    <div className="grid gap-20 lg:gap-32">
+      <section className="grid gap-10 lg:gap-20 xl:grid-cols-[3fr_1fr]">
         <div>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6">
             {summaryData.map((summary) => (
               <AnalyticsCard {...summary} key={summary.title} />
             ))}
           </div>
 
-          <div className="mt-14 flex w-2/3 flex-col gap-3">
+          <div className="mt-14 flex flex-col gap-3 xl:w-2/3">
             <Text intent="h3">User Registration</Text>
 
             <UserRegistration />
           </div>
         </div>
+
+        <aside>
+          <Summary />
+        </aside>
       </section>
 
-      <section className="grid grid-cols-2 gap-20">
+      <section className="grid gap-20 xl:grid-cols-2">
         <div>
           <UniqueVisitors />
         </div>
@@ -43,7 +48,7 @@ const Dashboard: NextPageWithLayout = () => {
         </div>
       </section>
 
-      <section className="grid grid-cols-3 gap-20">
+      <section className="grid gap-10 lg:gap-20 xl:grid-cols-3">
         <div>
           <UsersByGender />
         </div>

@@ -11,5 +11,5 @@ const data = {
 };
 
 export function UsersByGender() {
-  return <Pie data={data} />;
+  return <Pie options={{ responsive: true, radius: "80%" }} data={data} />;
 }
