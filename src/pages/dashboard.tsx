@@ -4,9 +4,11 @@ import Layout from "@components/layout";
 import { FiUsers, AiOutlineShopping, FaUsers } from "@icons";
 import {
   AnalyticsCard,
+  BottomCountries,
   Navigation,
   SessionsPerDay,
   Summary,
+  TopCountries,
   UniqueVisitors,
   UserByDevice,
   UserRegistration,
@@ -65,6 +67,12 @@ const Dashboard: NextPageWithLayout = () => {
           <Text intent="h3">Users By Device</Text>
           <UserByDevice />
         </div>
+      </section>
+
+      <section className="grid gap-10 lg:gap-20 xl:grid-cols-[3fr_2fr_2fr]">
+        <div></div>
+        <TopCountries />
+        <BottomCountries />
       </section>
     </div>
   );
