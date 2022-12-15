@@ -36,3 +36,4 @@ export { UsersByGender } from "./components/users-by-gender";
 export { SessionsPerDay } from "./components/sessions-per-day";
 export { Navigation } from "./components/navigation";
 export { UserByDevice } from "./components/user-by-device";
+export { BottomCountries, TopCountries } from "./components/countries";

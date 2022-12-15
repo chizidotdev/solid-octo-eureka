@@ -62,7 +62,7 @@ export type TMostViewedRhendors = {
   rhendor: string;
 };
 
-export type Summary = {
+export type TSummary = {
   registration: number;
   traffic: number;
   topCountry: TCountries["country"];
