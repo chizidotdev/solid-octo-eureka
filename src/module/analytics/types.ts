@@ -5,17 +5,17 @@ type FixedArray<N extends number, T> = N extends 0
       length: N;
     } & ReadonlyArray<T>;
 
-export type TRegistration = {
+export interface TRegistration {
   subscription: FixedArray<7, number>;
   newsletter: FixedArray<7, number>;
-};
+}
 
-export type TUniqueVisitors = {
+export interface TUniqueVisitors {
   amount: number;
   date: Date;
-};
+}
 
-export type TSessionsPerDay = {
+export interface TSessionsPerDay {
   amount: number;
   month:
     | "January"
@@ -30,47 +30,47 @@ export type TSessionsPerDay = {
     | "October"
     | "November"
     | "December";
-};
+}
 
-export type TUsersByGender = {
+export interface TUsersByGender {
   men: number;
   women: number;
-};
+}
 
-export type TNavigation = {
+export interface TNavigation {
   amount: number;
   route: string;
-};
+}
 
-export type TUsersByDevice = {
+export interface TUsersByDevice {
   amount: number;
   device: "Mobile" | "Tablet" | "Desktop";
-};
+}
 
-export type TUniqueVisitorsByLocation = {
+export interface TUniqueVisitorsByLocation {
   amount: number;
   location: string;
-};
+}
 
-export type TCountries = {
+export interface TCountries {
   amount: number;
   country: string;
-};
+}
 
-export type TMostViewedRhendors = {
+export interface TMostViewedRhendors {
   amount: number;
   rhendor: string;
-};
+}
 
-export type TSummary = {
+export interface TSummary {
   registration: number;
   traffic: number;
   topCountry: TCountries["country"];
   topRhendor: TMostViewedRhendors["rhendor"];
   topService: string;
-};
+}
 
-export type TMostViewed = {
+export interface TMostViewed {
   title: string;
   value: number;
   imageUrl?: string;
@@ -78,4 +78,4 @@ export type TMostViewed = {
     value: number;
     rank: "up" | "down";
   };
-};
+}
