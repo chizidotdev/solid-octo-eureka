@@ -37,3 +37,7 @@ export { SessionsPerDay } from "./components/sessions-per-day";
 export { Navigation } from "./components/navigation";
 export { UserByDevice } from "./components/user-by-device";
 export { BottomCountries, TopCountries } from "./components/countries";
+export {
+  MostViewedRhendors,
+  MostViewedServices,
+} from "./components/most-viewed";
