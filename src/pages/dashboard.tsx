@@ -5,6 +5,8 @@ import { FiUsers, AiOutlineShopping, FaUsers } from "@icons";
 import {
   AnalyticsCard,
   BottomCountries,
+  MostViewedRhendors,
+  MostViewedServices,
   Navigation,
   SessionsPerDay,
   Summary,
@@ -77,6 +79,11 @@ const Dashboard: NextPageWithLayout = () => {
         </div>
         <TopCountries />
         <BottomCountries />
+      </section>
+
+      <section className="grid gap-10 lg:grid-cols-2 lg:gap-20">
+        <MostViewedRhendors />
+        <MostViewedServices />
       </section>
     </div>
   );
