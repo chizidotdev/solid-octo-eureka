@@ -34,12 +34,12 @@ export const mostViewedRhendors: TMostViewed[] = [
     title: "Design Synchrony",
     value: 637,
     status: { rank: "up", value: 1 },
-    imageUrl: "/images/img_starrhendalog.svg",
+    imageUrl: "/images/img_des_logo.png",
   },
   {
     title: "Leo Vaccaro",
     value: 637,
-    status: { rank: "up", value: 2 },
+    status: { rank: "down", value: 2 },
     imageUrl: "/images/img_user1.png",
   },
   {
@@ -57,7 +57,7 @@ export const mostViewedRhendors: TMostViewed[] = [
   {
     title: "Col. Roderick Decker",
     value: 637,
-    status: { rank: "up", value: 5 },
+    status: { rank: "down", value: 5 },
     imageUrl: "/images/img_user4.png",
   },
 ];
@@ -71,7 +71,7 @@ export const mostViewedServices: TMostViewed[] = [
   {
     title: "Barber",
     value: 637,
-    status: { rank: "up", value: 2 },
+    status: { rank: "down", value: 2 },
   },
   {
     title: "Electrician",
@@ -86,6 +86,6 @@ export const mostViewedServices: TMostViewed[] = [
   {
     title: "Hari Stylist",
     value: 637,
-    status: { rank: "up", value: 5 },
+    status: { rank: "down", value: 5 },
   },
 ];
