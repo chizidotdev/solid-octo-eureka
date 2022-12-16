@@ -69,3 +69,13 @@ export type TSummary = {
   topRhendor: TMostViewedRhendors["rhendor"];
   topService: string;
 };
+
+export type TMostViewed = {
+  title: string;
+  value: number;
+  imageUrl?: string;
+  status: {
+    value: number;
+    rank: "up" | "down";
+  };
+};

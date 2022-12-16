@@ -1,4 +1,4 @@
-import type { TSummary, TRegistration, TCountries } from "./types";
+import type { TSummary, TRegistration, TCountries, TMostViewed } from "./types";
 
 export const userRegistration: TRegistration = {
   newsletter: [68, 78, 32, 164, 117, 142, 98],
@@ -27,4 +27,65 @@ export const bottomCountries: TCountries[] = [
   { amount: 5, country: "Togo" },
   { amount: 6, country: "Canada" },
   { amount: 9, country: "Australia" },
+];
+
+export const mostViewedRhendors: TMostViewed[] = [
+  {
+    title: "Design Synchrony",
+    value: 637,
+    status: { rank: "up", value: 1 },
+    imageUrl: "/images/img_starrhendalog.svg",
+  },
+  {
+    title: "Leo Vaccaro",
+    value: 637,
+    status: { rank: "up", value: 2 },
+    imageUrl: "/images/img_user1.png",
+  },
+  {
+    title: "Lynn Tanner",
+    value: 637,
+    status: { rank: "up", value: 3 },
+    imageUrl: "/images/img_user2.png",
+  },
+  {
+    title: "Sledge Hammer",
+    value: 637,
+    status: { rank: "up", value: 4 },
+    imageUrl: "/images/img_user3.png",
+  },
+  {
+    title: "Col. Roderick Decker",
+    value: 637,
+    status: { rank: "up", value: 5 },
+    imageUrl: "/images/img_user4.png",
+  },
+];
+
+export const mostViewedServices: TMostViewed[] = [
+  {
+    title: "Plumber",
+    value: 637,
+    status: { rank: "up", value: 1 },
+  },
+  {
+    title: "Barber",
+    value: 637,
+    status: { rank: "up", value: 2 },
+  },
+  {
+    title: "Electrician",
+    value: 637,
+    status: { rank: "up", value: 3 },
+  },
+  {
+    title: "Tailor",
+    value: 637,
+    status: { rank: "up", value: 4 },
+  },
+  {
+    title: "Hari Stylist",
+    value: 637,
+    status: { rank: "up", value: 5 },
+  },
 ];
