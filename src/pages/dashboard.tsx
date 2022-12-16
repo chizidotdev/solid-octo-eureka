@@ -16,10 +16,11 @@ import {
 } from "@module/analytics";
 import type { AnalyticsCardProps } from "@module/analytics";
 import { Text } from "@components/ui";
+import Image from "next/image";
 
 const Dashboard: NextPageWithLayout = () => {
   return (
-    <div className="grid gap-20 lg:gap-32">
+    <div className="grid gap-20 text-gray_night lg:gap-32">
       <section className="grid gap-10 lg:gap-20 xl:grid-cols-[3fr_1fr]">
         <div>
           <div className="flex flex-wrap items-center justify-center gap-6">
@@ -70,7 +71,10 @@ const Dashboard: NextPageWithLayout = () => {
       </section>
 
       <section className="grid gap-10 lg:gap-20 xl:grid-cols-[3fr_2fr_2fr]">
-        <div></div>
+        <div className="flex flex-col gap-5">
+          <Text intent="h3">Unique visitors by location</Text>
+          <Image src="/images/img_map.png" alt="Map" width={450} height={233} />
+        </div>
         <TopCountries />
         <BottomCountries />
       </section>
