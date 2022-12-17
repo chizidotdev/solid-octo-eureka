@@ -12,8 +12,8 @@ const UsersPage: NextPageWithLayout = () => {
 
   const panels = [
     <UsersTable key={1} data={users} />,
-    <UsersTable key={1} data={adminUsers} />,
-    <UsersTable key={1} data={userUsers} />,
+    <UsersTable key={2} data={adminUsers} />,
+    <UsersTable key={3} data={userUsers} />,
   ];
 
   return (
