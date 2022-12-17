@@ -2,6 +2,7 @@ import type { ChartData } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 
 export const data: ChartData<"doughnut", number[], unknown> = {
+  labels: ["Mobile", "Tablet", "Desktop"],
   datasets: [
     {
       label: "Total Users",
