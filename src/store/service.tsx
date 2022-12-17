@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 export type Service = {
   id: number;
@@ -11,12 +11,22 @@ const ServiceContext = createContext<{ services: Service[] }>({
   services: [],
 });
 
+const API_URL = "https://backend.myrhenda.com/api/v1/all-services";
+
 export const ServiceProvider = ({
   children,
 }: {
   children: React.ReactNode;
 }) => {
-  const [services] = useState(dummyServices);
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    fetch(`${API_URL}`)
+      .then((res) => res.json())
+      .then((data) =>
+        setServices((data.data as Service[]).sort((a, b) => a.id - b.id))
+      );
+  }, []);
 
   return (
     <ServiceContext.Provider value={{ services }}>
