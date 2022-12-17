@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import type { NextPageWithLayout } from "src/pages/_app";
 
 import Layout from "@components/layout";
 import ListBox from "@components/list-box";
-import Button from "@ui/button";
-import Text from "@ui/text";
 import { useRouter } from "next/router";
+import { Button, Input, Text } from "@components/ui";
 
 const roles = [{ name: "user" }, { name: "admin" }];
 
 const EditUser: NextPageWithLayout = () => {
+  const [, setImage] = useState<FileList | null>(null);
   const { push } = useRouter();
 
   const handleUpdate = () => {
@@ -22,10 +22,20 @@ const EditUser: NextPageWithLayout = () => {
         Edit User
       </Text>
 
-      <div className="flex flex-col gap-3">
-        Role
-        <ListBox data={roles} />
-      </div>
+      <section className="flex w-60 flex-col gap-5">
+        <div className="flex flex-col gap-1">
+          Image
+          <Input
+            type="file"
+            name="image"
+            onChange={(e) => setImage(e.target.files)}
+          />
+        </div>
+        <div className="flex flex-col gap-1">
+          Role
+          <ListBox data={roles} />
+        </div>
+      </section>
 
       <div className="max-w-xs">
         <Button onClick={handleUpdate}>Update</Button>

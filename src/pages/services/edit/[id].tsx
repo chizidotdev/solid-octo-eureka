@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import type { NextPageWithLayout } from "src/pages/_app";
+import { useRouter } from "next/router";
 
 import Layout from "@components/layout";
 import ListBox from "@components/list-box";
-import Button from "@ui/button";
-import Text from "@ui/text";
 import { useService } from "@store/service";
-import { useRouter } from "next/router";
-import { Textarea } from "@components/ui";
+import { Button, Text, Input, Textarea } from "@components/ui";
 
 const EditService: NextPageWithLayout = () => {
   const [description, setDescription] = useState("");
+  const [, setImage] = useState<FileList | null>(null);
   const { services } = useService();
   const { push } = useRouter();
 
@@ -25,12 +24,21 @@ const EditService: NextPageWithLayout = () => {
       </Text>
 
       <section className="flex w-60 flex-col gap-5">
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-1">
+          Image
+          <Input
+            type="file"
+            name="image"
+            onChange={(e) => setImage(e.target.files)}
+          />
+        </div>
+
+        <div className="flex flex-col gap-1">
           Services
           <ListBox data={services} />
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-1">
           Description
           <Textarea
             name="description"
