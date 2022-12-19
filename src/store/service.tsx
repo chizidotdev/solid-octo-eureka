@@ -25,7 +25,8 @@ export const ServiceProvider = ({
       .then((res) => res.json())
       .then((data) =>
         setServices((data.data as Service[]).sort((a, b) => a.id - b.id))
-      );
+      )
+      .catch((err) => console.error(err));
   }, []);
 
   return (
