@@ -1,9 +1,9 @@
 import type { Service } from "@store/service";
 import { createColumnHelper } from "@tanstack/react-table";
 import Image from "next/image";
-import TableBody from "../table-body";
-import TableHead from "../table-head";
-import TableOptions from "../table-options";
+import TableBody from "../components/table-body";
+import TableHead from "../components/table-head";
+import TableOptions from "../components/table-options";
 
 const columnHelper = createColumnHelper<Service>();
 
