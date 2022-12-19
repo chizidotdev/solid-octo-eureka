@@ -6,7 +6,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 
-type TableProps<T> = {
+export type TableProps<T> = {
   data: T[];
   columns: ColumnDef<T, unknown>[];
 };
